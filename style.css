@@ -1,26 +1,53 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(254, 254, 254, 0.511);
+    background-image: linear-gradient(to top, rgb(85, 78, 78), rgb(212, 212, 185));    
     margin: 0;
     padding: 0;
 }
 
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgb(131, 178, 194);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 .container {
-    max-width: 800px;
-    margin: 60px auto;
+    width: 80%;
     padding: 30px;
-    background: white;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: lightblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     text-align: center;
 }
 
-.fetch-button {
-    display: block;
-    width: 100%;
+.button-row {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+}
+
+.button-row + .button-row {
+    margin-top: 10px;
+}
+
+.fetch-button {
+    flex: 1;
+    margin: 5px;
     padding: 11px;
     font-size: 16px;
     cursor: pointer;
@@ -28,6 +55,7 @@ h1 {
     border-radius: 25px;
     background-color: rgb(87, 172, 188);
     color: white;
+    text-align: center;
 }
 
 .fetch-button:hover {
@@ -39,8 +67,10 @@ h1 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: rgba(254, 254, 254, 0.466);
 }
 
-.post {
+.post, .user, .comment {
     border-bottom: 1px solid black;
+    padding: 10px;
 }
