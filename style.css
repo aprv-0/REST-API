@@ -60,8 +60,20 @@ h1 {
     text-align: center;
 }
 
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
 .fetch-button:hover {
     background-color: rgba(87, 171, 188, 0.552);
+    animation: zoomIn 0.3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .data-container {
